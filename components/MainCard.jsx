@@ -8,7 +8,7 @@ const MainCard = () => {
         <div className="flex gap-4 items-center">
             <Image src={"/logo.png"} priority width={70} height={70} alt="logo" className="hover:scale-105 ease-in-out duration-300"/>
             
-            <h1 className="text-white font-extrabold text-3xl">Expense Tracker</h1>
+            <h1 className="text-white font-extrabold text-xl md:text-3xl">Expense Tracker</h1>
         </div>
 
         <Form />
