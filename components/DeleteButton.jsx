@@ -14,7 +14,7 @@ const DeleteButton = ({ id }) => {
       })
   
       if (res.ok) {
-        router.refresh();
+        router.refresh({scroll: false});
         } else {
         throw new Error("Failed to delete expense.")
         }

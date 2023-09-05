@@ -31,8 +31,7 @@ const Form = () => {
       })
 
       if (res.ok) {
-        router.refresh();
-        router.push("/");
+        router.refresh({scroll: false});
       } else {
         throw new Error("Failed to create task.")
       }
