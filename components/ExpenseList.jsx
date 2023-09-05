@@ -4,8 +4,6 @@ import DeleteButton from "./DeleteButton"
 
 async function getExpenses() {
 
-  const apiUrl = process.env.API_URL
-
   try {
     const res = await fetch('/api/expenses', {cache: "no-store"})
 
