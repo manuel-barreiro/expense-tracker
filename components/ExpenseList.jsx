@@ -1,3 +1,5 @@
+'use client';
+
 import DeleteButton from "./DeleteButton"
 
 async function getExpenses() {
@@ -5,7 +7,7 @@ async function getExpenses() {
   const apiUrl = process.env.API_URL
 
   try {
-    const res = await fetch(`${apiUrl}/api/expenses`, {cache: "no-store"})
+    const res = await fetch('/api/expenses', {cache: "no-store"})
 
     if (!res.ok) {
       throw new Error("Failed to fetch expenses.")
