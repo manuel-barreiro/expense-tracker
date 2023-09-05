@@ -7,8 +7,9 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Expense Tracker',
+  title: 'MB Expense Tracker',
   description: 'Track your expenses with this simple app.',
+  themeColor: '#130c24',
 }
 
 export default function RootLayout({ children }) {
