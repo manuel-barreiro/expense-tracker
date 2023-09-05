@@ -14,7 +14,7 @@ const MainCard = () => {
 
         <Form />
 
-        {/* <ExpenseList /> */}
+        <ExpenseList />
 
         <Totalizer />
         
