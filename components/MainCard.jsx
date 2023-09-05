@@ -2,7 +2,6 @@ import ExpenseList from "./ExpenseList"
 import Form from "./Form"
 import Totalizer from "./Totalizer"
 import Image from "next/image"
-import Link from "next/link"
 
 const MainCard = () => {
   return (

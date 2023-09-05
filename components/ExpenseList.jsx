@@ -2,7 +2,7 @@ import DeleteButton from "./DeleteButton"
 
 async function getExpenses() {
   try {
-    const res = await fetch("http://localhost:3000/api/expenses", {cache: "no-store"})
+    const res = await fetch(`${process.env.API_URL}/api/expenses`, {cache: "no-store"})
 
     if (!res.ok) {
       throw new Error("Failed to fetch expenses.")
@@ -18,15 +18,6 @@ async function getExpenses() {
 const ExpenseList = async () => {
 
   const { expenses } = await getExpenses()
- 
-  // const expenses = [ 
-  //   { id: 1, name: 'Rent', amount: 100 }, 
-  //   { id: 2, name: 'Groceries', amount: 100 }, 
-  //   { id: 3, name: 'Gas', amount: 50},
-  //   { id: 4, name: 'Food', amount: 50},
-  //   { id: 5, name: 'Clothes', amount: 50},
-  //   { id: 6, name: 'Entertainment', amount: 50},
-  // ]
   
   return (
     <section className="w-full text-brand-200">
