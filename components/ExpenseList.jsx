@@ -1,26 +1,27 @@
-'use client';
-
 import DeleteButton from "./DeleteButton"
 
 async function getExpenses() {
 
+  const apiUrl = process.env.API_URL
+
   try {
-    const res = await fetch('/api/expenses', {cache: "no-store"})
+      const res = await fetch(`${apiUrl}/api/expenses`, {
+          cache: "no-store"
+      })
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch expenses.")
-    }
+      if (!res.ok) {
+          throw new Error("Failed to fetch expenses.")
+      }
 
-    return res.json()
-
+      return res.json()
   } catch (error) {
-    console.log(error)
+      console.log("Error loading expenses:", error)
   }
 }
 
 const ExpenseList = async () => {
 
-  const { expenses } = await getExpenses()
+  const { expenses } = await getExpenses();
   
   return (
     <section className="w-full text-brand-200">
